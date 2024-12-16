@@ -1,0 +1,230 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}  % For math formulas
+
+\begin{document}
+\section{}	
+\subsection{}		
+	\[
+	\int 2x e^{x^2} \, dx = \int e^u \, du \quad \text{(Let } u = x^2, \, du = 2x \, dx \text{, substitute the variable)}
+	\]
+	
+	\[
+	= e^u + C \quad \text{(Integral of } \int e^u \, du = e^u + C\text{)}
+	\]
+	
+	\[
+	= e^{x^2} + C \quad \text{(Substitute back } u = x^2 \text{ into the result)}
+	\]
+	
+	
+\subsection{}	
+
+
+\[
+\int \sin^3 x \cos^2 x \, dx = \int (1 - u^2) u^2 (-du)
+\]
+
+\[
+= - \int (u^2 - u^4) \, du \quad \text{(Expanding the expression)}
+\]
+
+\[
+= - \left( \int u^2 \, du - \int u^4 \, du \right)
+\]
+
+\[
+= - \left( \frac{u^3}{3} - \frac{u^5}{5} \right) + C
+\]
+
+\[
+= - \frac{u^3}{3} + \frac{u^5}{5} + C \quad \text{(Substitute back } u = \cos x \text{)}
+\]
+
+\[
+= - \frac{\cos^3 x}{3} + \frac{\cos^5 x}{5} + C
+\]
+
+
+\subsection{}	
+
+
+\[
+\int \frac{\sin(\sqrt{x})}{\sqrt{x}} \, dx = \int \frac{\sin(u)}{u} \cdot 2u \, du \quad \text{(Substitute in terms of } u \text{)}
+\]
+
+\[
+= 2 \int \sin(u) \, du \quad \text{(Simplify the integral)}
+\]
+
+\[
+= -2 \cos(u) + C \quad \text{(Integrating } \sin(u) \text{)}
+\]
+
+\[
+= -2 \cos(\sqrt{x}) + C \quad \text{(Substitute back } u = \sqrt{x} \text{)}
+\]
+
+
+\subsection{}
+\[
+\int \frac{1}{4 - 9x^2} \, dx \quad \text{(Original integral expression)}
+\]
+
+\[
+= \int \frac{1}{2^2 - (3x)^2} \, dx \quad \text{(Rewriting the denominator as a difference of squares)}
+\]
+
+\[
+= \frac{1}{2} \int \frac{1}{1 - \left( \frac{3x}{2} \right)^2} \, dx \quad \text{(Factoring out the constant \( \frac{1}{2} \))}
+\]
+
+\[
+\text{Let } u = \frac{3x}{2}, \quad du = \frac{3}{2} dx \quad \text{(Substitute \( u = \frac{3x}{2} \))}
+\]
+
+\[
+dx = \frac{2}{3} \, du \quad \text{(Differentiating both sides with respect to \( x \))}
+\]
+
+\[
+= \frac{1}{2} \cdot \frac{2}{3} \int \frac{1}{1 - u^2} \, du \quad \text{(Substituting in terms of } u \text{)}
+\]
+
+\[
+= \frac{1}{3} \int \frac{1}{1 - u^2} \, du \quad \text{(Simplifying the constants)}
+\]
+
+\[
+= \frac{1}{3} \cdot \frac{1}{2} \ln \left| \frac{1 + u}{1 - u} \right| + C \quad \text{(Using the standard integral formula for } \int \frac{1}{1 - u^2} \, du)
+\]
+
+\[
+= \frac{1}{6} \ln \left| \frac{1 + u}{1 - u} \right| + C \quad \text{(Final expression)}
+\]
+
+\[
+= \frac{1}{6} \ln \left| \frac{1 + \frac{3x}{2}}{1 - \frac{3x}{2}} \right| + C \quad \text{(Substitute back \( u = \frac{3x}{2} \))}
+\]
+
+\subsection{}
+
+\[
+I = \int \frac{x^3}{\sqrt{x^2 + 2}} \, dx
+\]
+
+
+\[
+x^3 = x(u - 2)
+\]
+
+
+\[
+I = \int \frac{x(u - 2)}{\sqrt{u}} \, dx
+\]
+
+
+
+\[
+I = \frac{1}{2} \int \frac{(u - 2)}{\sqrt{u}} \, du
+\]
+
+\[
+I = \frac{1}{2} \int \frac{u}{\sqrt{u}} \, du - \frac{1}{2} \int \frac{2}{\sqrt{u}} \, du
+\]
+
+The first integral is:
+
+\[
+\int \frac{u}{\sqrt{u}} \, du = \int u^{1/2} \, du = \frac{2}{3} u^{3/2}
+\]
+
+
+\[
+\int \frac{2}{\sqrt{u}} \, du = 2 \int u^{-1/2} \, du = 4 u^{1/2}
+\]
+
+Substitute \( u = x^2 + 2 \) back into the expression:
+
+\[
+I = \frac{1}{2} \left( \frac{2}{3} (x^2 + 2)^{3/2} - 4 (x^2 + 2)^{1/2} \right) + C
+\]
+
+
+\subsection{}
+
+	
+	\[
+	\int \frac{1-x}{1+x} \, dx \quad \text{(Original integral expression)}
+	\]
+	
+	\[
+	= \int \frac{1+x - 2x}{1+x} \, dx \quad \text{(Rewrite the numerator as \(1 + x - 2x\))}
+	\]
+	
+	\[
+	= \int \frac{1+x}{1+x} \, dx - \int \frac{2x}{1+x} \, dx \quad \text{(Separate the integral)}
+	\]
+	
+	\[
+	= \int 1 \, dx - 2 \int \frac{x}{1+x} \, dx \quad \text{(Simplify each term)}
+	\]
+	
+	\[
+	= x - 2 \int \frac{x}{1+x} \, dx \quad \text{(The first term is straightforward)}
+	\]
+	
+	Now, let’s solve the remaining integral. We use substitution:
+	
+	\[
+	u = 1 + x, \quad du = dx \quad \text{(Let \( u = 1 + x \))}
+	\]
+	
+	\[
+	\int \frac{x}{1+x} \, dx = \int \frac{u-1}{u} \, du \quad \text{(Rewrite the integrand in terms of \( u \))}
+	\]
+	
+	\[
+	= \int 1 \, du - \int \frac{1}{u} \, du \quad \text{(Separate the fraction)}
+	\]
+	
+	\[
+	= u - \ln |u| + C \quad \text{(Integrate each term)}
+	\]
+	
+	\[
+	= (1+x) - \ln |1+x| + C \quad \text{(Substitute back \( u = 1+x \))}
+	\]
+	
+	Now, substitute this back into the original integral:
+	
+	\[
+	\int \frac{1-x}{1+x} \, dx = x - 2 \left( (1+x) - \ln |1+x| \right) + C
+	\]
+	
+	\[
+	= x - 2(1+x) + 2\ln |1+x| + C
+	\]
+	
+	\[
+	= x - 2 - 2x + 2\ln |1+x| + C
+	\]
+	
+	\[
+	= -x - 2 + 2\ln |1+x| + C
+	\]
+	
+	Thus, the final result is:
+	
+	\[
+	\int \frac{1-x}{1+x} \, dx = -x - 2 + 2\ln |1+x| + C
+	\]
+	
+\subsection{}
+
+
+\[
+\int \frac{1-x}{1+x} \, dx 
+\]
+
+
+\end{document}
