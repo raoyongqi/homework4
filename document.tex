@@ -152,54 +152,70 @@ I = \frac{1}{2} \left( \frac{2}{3} (x^2 + 2)^{3/2} - 4 (x^2 + 2)^{1/2} \right) +
 
 \subsection{}
 
-	
+
 	\[
-	\int \frac{1-x}{1+x} \, dx \quad \text{(Original integral expression)}
+	\int \frac{1-x}{1+x} \, dx
 	\]
 	
-	\[
-	= \int \frac{1+x - 2x}{1+x} \, dx \quad \text{(Rewrite the numerator as \(1 + x - 2x\))}
-	\]
+
 	
 	\[
-	= \int \frac{1+x}{1+x} \, dx - \int \frac{2x}{1+x} \, dx \quad \text{(Separate the integral)}
+	= \int \frac{1+x - 2x}{1+x} \, dx
 	\]
+
 	
 	\[
-	= \int 1 \, dx - 2 \int \frac{x}{1+x} \, dx \quad \text{(Simplify each term)}
+	= \int \frac{1+x}{1+x} \, dx - \int \frac{2x}{1+x} \, dx
 	\]
+	
+
 	
 	\[
-	= x - 2 \int \frac{x}{1+x} \, dx \quad \text{(The first term is straightforward)}
+	= \int 1 \, dx - 2 \int \frac{x}{1+x} \, dx
 	\]
 	
-	Now, let’s solve the remaining integral. We use substitution:
+
+	\[
+	= x - 2 \int \frac{x}{1+x} \, dx
+	\]
+	
+
 	
 	\[
-	u = 1 + x, \quad du = dx \quad \text{(Let \( u = 1 + x \))}
+	u = 1 + x, \quad du = dx
 	\]
+	
+
 	
 	\[
-	\int \frac{x}{1+x} \, dx = \int \frac{u-1}{u} \, du \quad \text{(Rewrite the integrand in terms of \( u \))}
+	\int \frac{x}{1+x} \, dx = \int \frac{u-1}{u} \, du
 	\]
+	
+
 	
 	\[
-	= \int 1 \, du - \int \frac{1}{u} \, du \quad \text{(Separate the fraction)}
+	= \int 1 \, du - \int \frac{1}{u} \, du
 	\]
+	
+
 	
 	\[
-	= u - \ln |u| + C \quad \text{(Integrate each term)}
+	= u - \ln |u| + C
 	\]
+	
+
 	
 	\[
-	= (1+x) - \ln |1+x| + C \quad \text{(Substitute back \( u = 1+x \))}
+	= (1+x) - \ln |1+x| + C
 	\]
 	
-	Now, substitute this back into the original integral:
+
 	
 	\[
 	\int \frac{1-x}{1+x} \, dx = x - 2 \left( (1+x) - \ln |1+x| \right) + C
 	\]
+	
+
 	
 	\[
 	= x - 2(1+x) + 2\ln |1+x| + C
@@ -213,18 +229,223 @@ I = \frac{1}{2} \left( \frac{2}{3} (x^2 + 2)^{3/2} - 4 (x^2 + 2)^{1/2} \right) +
 	= -x - 2 + 2\ln |1+x| + C
 	\]
 	
-	Thus, the final result is:
+
 	
 	\[
-	\int \frac{1-x}{1+x} \, dx = -x - 2 + 2\ln |1+x| + C
+	\int \frac{1-x}{1+x} \, dx = -x + 2\ln |1+x| + C'
 	\]
 	
+
+
 \subsection{}
 
 
-\[
-\int \frac{1-x}{1+x} \, dx 
-\]
+
+
+	
+	\[
+	\int \frac{1}{\sqrt{x}(1+x)} \, dx = \int \frac{1}{u(1+u^2)} \cdot 2u \, du
+	\]
+	
+
+	
+	\[
+	= 2 \int \frac{1}{1+u^2} \, du
+	\]
+	
+
+	
+	\[
+	\int \frac{1}{1+u^2} \, du = \arctan(u)
+	\]
+	
+
+	
+	\[
+	2 \arctan(u) + C
+	\]
+	
+
+	
+	\[
+	2 \arctan(\sqrt{x}) + C
+	\]
+	
+
+	
+	\[
+	\int \frac{1}{\sqrt{x}(1+x)} \, dx = 2 \arctan(\sqrt{x}) + C
+	\]
+	
+
+\subsection{}
+
+
+
+
+
+
+
+
+
+	
+
+	
+	\[
+	\int (\cos x)^3 \, dx
+	\]
+	
+
+	
+	\[
+	\cos^3 x = \frac{3\cos x + \cos(3x)}{4}
+	\]
+	
+	
+	\[
+	\int \cos^3 x \, dx = \int \frac{3 \cos x + \cos(3x)}{4} \, dx
+	\]
+	
+
+	
+	\[
+	= \frac{1}{4} \int (3 \cos x + \cos(3x)) \, dx
+	\]
+	
+
+	
+	\[
+	= \frac{1}{4} \left( 3 \int \cos x \, dx + \int \cos(3x) \, dx \right)
+	\]
+	
+
+	
+	\[
+	\int \cos x \, dx = \sin x
+	\]
+
+	\[
+	\int \cos(3x) \, dx = \frac{1}{3} \sin(3x)
+	\]
+	
+
+	
+	\[
+	\frac{1}{4} \left( 3 \sin x + \frac{1}{3} \sin(3x) \right) + C
+	\]
+	
+	\[
+	= \frac{3}{4} \sin x + \frac{1}{12} \sin(3x) + C
+	\]
+	
+
+	
+	\[
+	\int (\cos x)^3 \, dx = \frac{3}{4} \sin x + \frac{1}{12} \sin(3x) + C
+	\]
+
+
+\subsection{}	
+
+
+
+
+
+
+	
+	\[
+	\int \frac{1}{1 + \sqrt[3]{x}} \, dx
+	\]
+	
+
+	\[
+	\int \frac{1}{1 + u} \cdot 3u^2 \, du = 3 \int \frac{u^2}{1 + u} \, du
+	\]
+	
+
+	
+	\[
+	\frac{u^2}{1 + u} = u - 1 + \frac{1}{1 + u}
+	\]
+	
+
+	
+	\[
+	3 \int \left( u - 1 + \frac{1}{1 + u} \right) du = 3 \left( \frac{u^2}{2} - u + \ln |1 + u| \right) + C
+	\]
+	
+
+	
+	\[
+	\int \frac{1}{1 + \sqrt[3]{x}} \, dx = \frac{3}{2} \sqrt[3]{x^2} - 3 \sqrt[3]{x} + 3 \ln |1 + \sqrt[3]{x}| + C
+	\]
+	
+
+
+
+
+\subsection{}	
+
+	\[
+	I = \int \frac{1}{\sqrt{1+e^x}} \, dx
+	\]
+	
+
+	
+	\[
+	2u \, du = e^x \, dx
+	\]
+	
+
+	
+	\[
+	dx = \frac{2u \, du}{u^2 - 1}
+	\]
+	
+
+	
+	\[
+	I = \int \frac{1}{u} \cdot \frac{2u \, du}{u^2 - 1}
+	\]
+	
+
+	
+	\[
+	I = \int \frac{2}{u^2 - 1} \, du
+	\]
+	
+
+	
+	\[
+	\frac{2}{u^2 - 1} = \frac{1}{u - 1} - \frac{1}{u + 1}
+	\]
+	
+
+	
+	\[
+	I = \int \left( \frac{1}{u - 1} - \frac{1}{u + 1} \right) du
+	\]
+	
+
+	
+	\[
+	I = \ln|u - 1| - \ln|u + 1|
+	\]
+	
+
+	
+	\[
+	I = \ln \left| \frac{u - 1}{u + 1} \right|
+	\]
+	
+
+	
+	\[
+	I = \ln \left| \frac{\sqrt{1 + e^x} - 1}{\sqrt{1 + e^x} + 1} \right| + C
+	\]
+	
+
+
 
 
 \end{document}
